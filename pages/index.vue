@@ -15,7 +15,7 @@
                 class="w-20rem h-20rem bg-cover bg-center"
                 :style="{ backgroundImage: `url(${slotProps.data.url})` }"
               />
-              <div class="text-2xl font-bold">{{ slotProps.data.name }}</div>
+              <div class="text-2xl text-center text-primary font-bold">{{ slotProps.data.name }}</div>
             </div>
           </nuxt-link>
         </div>

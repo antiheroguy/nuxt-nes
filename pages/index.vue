@@ -5,19 +5,25 @@
       layout="grid"
     >
       <template #grid="slotProps">
-        <div class="sm:col-12 md:col-6 lg:col-4 xl:col-3 p-2">
-          <nuxt-link
-            :to="`/game/${slotProps.data.id}`"
-            class="p-4 border-1 surface-border surface-card border-round block"
+        <div class="grid grid-nogutter">
+          <div 
+            class="sm:col-12 md:col-6 lg:col-4 xl:col-3 p-2"
+            v-for="item in slotProps.items"
+            :key="item.id"
           >
-            <div class="flex flex-column align-items-center gap-3 py-5">
-              <div
-                class="w-20rem h-20rem bg-cover bg-center"
-                :style="{ backgroundImage: `url(${slotProps.data.url})` }"
-              />
-              <div class="text-2xl text-center text-primary font-bold">{{ slotProps.data.name }}</div>
-            </div>
-          </nuxt-link>
+            <nuxt-link
+              :to="`/game/${item.id}`"
+              class="p-4 border-1 surface-border surface-card border-round block h-full"
+            >
+              <div class="flex flex-column align-items-center gap-3 py-5">
+                <div
+                  class="w-20rem h-20rem bg-cover bg-center"
+                  :style="{ backgroundImage: `url(${item.url})` }"
+                />
+                <div class="text-2xl text-center text-primary font-bold">{{ item.name }}</div>
+              </div>
+            </nuxt-link>
+          </div>
         </div>
       </template>
     </DataView>

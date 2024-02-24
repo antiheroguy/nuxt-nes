@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b96c4e82-f99a-4cd3-8ef3-de2949ab4e45/deploy-status)](https://app.netlify.com/sites/vuefire-nes/deploys)
 
-# Vuefire NES
+# Nuxt NES
 
 ## Setup
 
